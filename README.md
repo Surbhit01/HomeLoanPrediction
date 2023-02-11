@@ -9,3 +9,4 @@ To automate this process, they have given a problem to identify the customers se
 * The dataset with 11 features like Gender, number of dependents, Loan Amount etc was analysed. 
 * Based on the values of the features, appropriate data processing was done.
 * Used Random Forest to build the model for prediction. This model(.pkl) was depoyed on [Google Cloud Platform]
+(http://homeloanprediction.appspot.com/)
