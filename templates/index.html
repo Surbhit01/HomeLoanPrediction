@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>HOME LOAN APPROVAL PREDICTION</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+</head>
+
+<body style="background-color:aquamarine;">
+ <div class="Prediction">
+	<h1>HOME LOAN APPROVAL PREDICTION</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="\predict"method="post">
+      <label for="Applicant Income">Applicant's Income (In thousands)</label><br>
+      <input type="number" id="Applicant Income" name="Applicant Income" required>
+      <br><br>
+      <label for="Co Applicant Income">C Applicant's Income (In thousands)</label><br>
+      <input type="number" id="Co Applicant Income" name="Co Applicant Income" required>
+      <br><br>
+      <label for="Loan Amount">Loan Amount (In thousands)</label><br>
+      <input type="number" id="Loan Amount" name="Loan Amount" required>
+      <br><br>
+    	<label for="Loan Amount Term">Loan Amount Term (In months)</label><br>
+      <input type="number" id="Loan Amount Term" name="Loan Amount Term" required>
+      <br><br>
+          <label for="Gender">Gender</label>
+          <select id="Gender" name="Gender" required="required">
+            <option value="1">Male</option>
+            <option value="0">Female</option>
+          </select>
+          <br><br>
+          <label for="Married">Married</label>
+          <select id="Married" name="Married" required="required">
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+          </select>
+          <br><br>
+          <label for="Dependents">Dependents</label>
+          <select id="Dependents" name="Dependents" required="required">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3+</option>
+          </select>
+          <br><br>
+          <label for="Education">Education</label>
+          <select id="education" name="Education" required="required">
+            <option value="1">Graduate</option>
+            <option value="0">Not Graduate</option>
+          </select>
+          <br><br>
+          <label for="Self employed">Self employed</label>
+          <select id="Self employed" name="Self employed" required="required">
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+          </select>
+          <br><br>
+          <label for="Credit History">Does Credit History meet guidelines</label>
+          <select id="Credit History" name="Credit History" required="required">
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+          </select>
+          <br><br>
+          <label for="Property Area Type">Property Area Type</label>
+          <select id="Property Area Type" name="Property Area Type" required="required">
+            <option value="Urban">Urban</option>
+            <option value="Rural">Rural</option>
+            <option value="Semiurban">Semiurban</option>
+          </select>
+          <br><br>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   <h3>{{ prediction_text }}</h3>
+
+ </div>
+
+
+</body>
+</html>
