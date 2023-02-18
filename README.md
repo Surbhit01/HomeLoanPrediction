@@ -44,7 +44,4 @@ Vizualized different factors and how their effect on the probablity of loan bein
 
 [Image Above] Error Term Analysis for Random Forest on test data
 
-![HomePage](https://user-images.githubusercontent.com/24591039/219857530-571a4a14-50fa-42d0-af49-254ff7425b17.png)
-
-[Image Above] Deployment Home Page
 
