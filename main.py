@@ -56,7 +56,8 @@ def predict():
         pred = model.predict([[int(Gender),int(Married), int(Dependents), int(Education), int(Self_Employed),
         int(ApplicantIncome), int(CoapplicantIncome), int(LoanAmount), int(Loan_Amount_Term),
         int(Credit_History), int(Rural), int(Semiurban),int(Urban)]])
-
+        
+        print(pred)
         print(pred[0])
         status=""
         #print(prob)
